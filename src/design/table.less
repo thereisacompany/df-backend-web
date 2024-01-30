@@ -1,0 +1,31 @@
+// =================================
+// ===========.ceos-basic-table.vxe-grid(與BasicTable樣式相同)==========
+.ceos-basic-table.vxe-grid {
+  background-color: #fff;
+
+  .vxe-table {
+    padding: 6px;
+    border-radius: 2px;
+  }
+
+  .vxe-header--row,
+  .vxe-table--render-default.border--inner .vxe-header--column {
+    background-image: linear-gradient(#fafafa, #fafafa);
+  }
+
+  .vxe-header--column::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 1.6em;
+    background-color: rgba(0 0 0/ 6%);
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+    content: '';
+  }
+
+  .vxe-header--column:last-child::before {
+    width: 0;
+  }
+}

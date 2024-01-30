@@ -1,0 +1,88 @@
+@import './pagination.less';
+@import './input.less';
+@import './btn.less';
+@import './modal.less';
+
+.ant-image-preview-root {
+  img {
+    display: unset;
+  }
+}
+
+span.anticon:not(.app-iconify) {
+  vertical-align: 0.125em !important;
+}
+
+.ant-back-top {
+  right: 20px;
+  bottom: 20px;
+}
+
+.collapse-container__body {
+  > .ant-descriptions {
+    margin-left: 6px;
+  }
+}
+
+.ant-image-preview-operations {
+  background-color: rgb(0 0 0 / 30%);
+}
+
+.ant-popover {
+  &-content {
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    // width: 180px;
+    height: 40px !important;
+    border-radius: 3px;
+
+    .ant-popover-arrow {
+      display: none;
+    }
+
+    .ant-popover-inner {
+      // height: 40px !important;
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border-radius: 3px;
+
+      &:hover {
+        border-radius: 3px;
+
+        .ant-popover-inner-content {
+          color: #e7582b;
+        }
+      }
+
+      .ant-popover-inner-content {
+        padding: 0;
+      }
+    }
+  }
+
+  &-placement-bottomLeft {
+    padding-top: 0 !important;
+  }
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after,
+.ant-tree-checkbox-checked .ant-tree-checkbox-inner::after {
+  border-top: 0 !important;
+  border-left: 0 !important;
+}
+
+.noTabClass {
+  .ant-tabs-nav-wrap {
+    display: none !important;
+  }
+}
+
+html[data-theme='dark'] {
+  .ant-layout {
+    background: @bg-color-dark;
+  }
+
+  .ant-layout-header {
+    background: @header-dark-bg-color;
+  }
+}

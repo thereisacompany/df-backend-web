@@ -1,0 +1,122 @@
+//list style
+.list {
+  margin-bottom: 1rem;
+  // padding: 16px 24px;
+  text-align: center;
+
+  .list-body {
+    background-color: @white;
+    box-shadow: none;
+    margin: 2px 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+
+    &:first-child {
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      border-bottom-left-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+
+    .fa-chevron-right {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .accordion-body {
+      margin: 0.5rem;
+      align-items: center;
+
+      p {
+        margin: 0;
+      }
+
+      &:nth-child(odd) {
+        background-color: @content-bg;
+      }
+    }
+
+    .no-bg-color {
+      background-color: transparent !important;
+
+      &:nth-child(odd) {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  .list-title {
+    float: left;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .card-bg {
+    background-color: @button-primary-color;
+  }
+}
+
+.list-header {
+  background-color: @content-white;
+  align-items: center;
+  border-radius: 0.25rem;
+}
+
+.list-body-content {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  align-items: center;
+}
+
+.list-noBorder {
+  border: none;
+  margin-bottom: 0;
+
+  .list-body {
+    box-shadow: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    // border: 1px dashed @border-color-dark;
+    border-radius: 0.25rem;
+
+    &:last-child {
+      // border-bottom: 1px dashed @border-color-dark;
+    }
+  }
+
+  .ant-divider-horizontal {
+    margin: 0.75rem 0 !important;
+  }
+}
+
+.asset-list-noBorder {
+  border: none;
+  margin-bottom: 0;
+
+  .list-body {
+    box-shadow: none;
+    // padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px dashed @border-color-dark;
+    border-radius: 0.25rem;
+
+    &:last-child {
+      border-bottom: 1px dashed @border-color-dark;
+    }
+  }
+
+  .ant-divider-horizontal {
+    margin: 0.75rem 0 !important;
+  }
+}
