@@ -1,0 +1,59 @@
+.filter-content {
+  position: relative;
+
+  .filter-collapse {
+    background-color: @filter-content-background-color;
+    border-radius: 0.25rem;
+
+    .collapse-body {
+      border-radius: 0.25rem;
+
+      .ant-collapse-header {
+        height: 64px;
+
+        .ant-collapse-arrow {
+          color: @filter-title-font-color;
+          top: 22px;
+        }
+
+        .title {
+          color: @filter-title-font-color;
+          display: flex;
+          align-items: center;
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .ant-collapse-content {
+        border-top: none;
+        background-color: @filter-content-background-color;
+
+        &-box {
+          padding: 9px 29px 13px 19px;
+        }
+      }
+    }
+  }
+
+  .filter-collapse-advanced {
+    border: none !important;
+
+    & > .ant-collapse-item {
+      border-bottom: none !important;
+    }
+
+    .ant-collapse-header {
+      padding: 0 !important;
+      height: 0 !important;
+    }
+
+    .ant-collapse-content {
+      &-box {
+        padding: 0 !important;
+      }
+    }
+  }
+}

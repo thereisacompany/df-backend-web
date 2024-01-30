@@ -1,0 +1,186 @@
+// =================================
+// ==============modal message======
+// =================================
+.modal-icon-warning {
+  color: @warning-color !important;
+}
+
+.modal-icon-success {
+  color: @success-color !important;
+}
+
+.modal-icon-error {
+  color: @error-color !important;
+}
+
+.modal-icon-info {
+  color: @primary-color !important;
+}
+// =================================
+// ======== ant-modal-confirm ======
+// =================================
+.ant-modal-confirm {
+  .ant-btn {
+    border-radius: 6px;
+  }
+}
+// =================================
+// =======custom-success-modal======
+// =================================
+.custom-success-modal {
+  .ant-btn-primary {
+    border-color: @button-success-color;
+    background: @button-success-color;
+  }
+
+  .ant-btn-primary:hover,
+  .ant-btn-primary:focus {
+    border-color: @button-success-hover-color;
+    background: @button-success-hover-color;
+  }
+}
+
+.custom-confirm-modal {
+  .ant-modal-header {
+    border: 0;
+  }
+
+  .ant-modal .ant-modal-body > .scrollbar {
+    padding: 0 1.75rem;
+  }
+
+  .ant-modal .ant-modal-footer {
+    border: 0;
+    padding: 0 1.75rem 1.75rem;
+  }
+
+  .anticon-info-circle {
+    float: left;
+    margin-right: 16px;
+    font-size: 22px;
+  }
+
+  .ant-modal-confirm-title {
+    line-height: 1.4;
+  }
+}
+
+// =================================
+// ==============登入彈窗======
+// =================================
+.login-modal {
+  .ant-modal {
+    width: 60% !important;
+
+    @media screen and (max-width: @screen-md) {
+      width: 100% !important;
+    }
+
+    .ant-modal-header {
+      padding: 0;
+      border: 0;
+    }
+
+    .ant-modal-body > .scrollbar {
+      padding: 0;
+    }
+
+    .ant-modal-footer {
+      border: 0;
+      padding: 0 1.75rem 1.75rem;
+    }
+
+    //form必填未填時的樣式
+    .ant-form-item-has-error {
+      &:not(.ant-input-disabled) {
+        &:not(.ant-input-borderless) {
+          .ant-input {
+            border: none;
+            background-color: #fffcf7;
+
+            &:hover {
+              border: none;
+              background-color: #fffcf7;
+            }
+          }
+        }
+      }
+
+      &:not(.ant-input-affix-wrapper-disabled) {
+        &:not(.ant-input-affix-wrapper-borderless) {
+          .ant-input-affix-wrapper,
+          .ant-input-affix-wrapper:hover {
+            background-color: #fffcf7;
+            box-shadow: 0 0 7px 2px #fff3db;
+            border: double 1px transparent;
+            border-radius: 3px;
+            background-image: linear-gradient(#fffcf7, #fffcf7),
+              linear-gradient(to bottom, #dd8905, #ff284e);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+          }
+        }
+      }
+
+      &:not(.ant-input-number-affix-wrapper-disabled) {
+        &:not(.ant-input-number-affix-wrapper-borderless) {
+          .ant-input-number-affix-wrapper,
+          .ant-input-number-affix-wrapper:hover {
+            background-color: #fffcf7;
+            box-shadow: 0 0 7px 2px #fff3db;
+            border: double 1px transparent;
+            border-radius: 3px;
+            background-image: linear-gradient(#fffcf7, #fffcf7),
+              linear-gradient(to bottom, #dd8905, #ff284e);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+          }
+        }
+      }
+
+      .ant-select {
+        &:not(.ant-select-disabled) {
+          &:not(.ant-select-customize-input) {
+            .ant-select-selector {
+              background-color: #fffcf7;
+              box-shadow: 0 0 7px 2px #fff3db;
+              border: double 1px transparent;
+              border-radius: 3px;
+              background-image: linear-gradient(#fffcf7, #fffcf7),
+                linear-gradient(to bottom, #dd8905, #ff284e);
+              background-origin: border-box;
+              background-clip: padding-box, border-box;
+            }
+          }
+        }
+      }
+    }
+
+    //必填提示文字
+    .ant-form-item-explain-error {
+      color: #ff284e;
+      background: linear-gradient(#dd8905, #ff284e);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .ant-form-item-label
+      > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+      display: none;
+    }
+  }
+
+  .anticon-info-circle {
+    float: left;
+    margin-right: 16px;
+    font-size: 22px;
+  }
+
+  .ant-modal-confirm-title {
+    line-height: 1.4;
+  }
+
+  .scroll-container .scrollbar__wrap {
+    margin-bottom: 0 !important;
+  }
+}
