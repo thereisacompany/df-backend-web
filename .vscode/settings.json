@@ -1,0 +1,8 @@
+{
+    "i18n-ally.localesPaths": [
+        "src/locales",
+        "src/locales/lang",
+        "public/public/resource/tinymce/langs",
+        "public/__MACOSX/public/resource/tinymce/langs"
+    ]
+}
