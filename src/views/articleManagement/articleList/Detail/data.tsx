@@ -27,19 +27,19 @@ export const schemas_step1: FormSchema[] = [
     },
     colProps: { xs: 24, sm: 24, md: 24, lg: 24 },
   },
-  // {
-  //   field: 'code',
-  //   label: t('component.articleManagement.pronounSettings'),
-  //   component: 'Input',
-  //   required: true,
-  //   componentProps: {
-  //     placeholder: t('common.inputText'),
-  //     allowClear: true,
-  //     maxlength: 100,
-  //     showCount: true,
-  //   },
-  //   colProps: { xs: 24, sm: 24, md: 12, lg: 12 },
-  // },
+  {
+    field: 'code',
+    label: t('component.articleManagement.pronounSettings'),
+    component: 'Input',
+    required: true,
+    componentProps: {
+      placeholder: t('common.inputText'),
+      allowClear: true,
+      maxlength: 100,
+      showCount: true,
+    },
+    colProps: { xs: 24, sm: 24, md: 12, lg: 12 },
+  },
   {
     field: 'category',
     label: t('component.articleManagement.articleCategory'),
@@ -62,7 +62,7 @@ export const schemas_step1: FormSchema[] = [
     componentProps: {
       placeholder: t('common.chooseText'),
       valueFormat: 'YYYY-MM-DD',
-      disabled: true,
+      disabled: false,
     },
     colProps: { xs: 24, sm: 6, md: 6, lg: 4 },
   },

@@ -123,7 +123,10 @@
       const handleBeforeUpload = async (file: File) => {
         //防呆: 檔案大小
         const isLt20M = props.maxSize && file.size / 1024 / 1024 >= props.maxSize;
+        // console.log(file.size / 1024 / 1024);
+        // console.log(props.maxSize);
         if (isLt20M) {
+          
           showMsg('error', `${file.name} ${t('component.upload.maxSizeOver', [props.maxSize])}`);
           return Upload.LIST_IGNORE;
         }
@@ -181,10 +184,32 @@
             let result: any = [];
 
             //取得要上傳的檔案
+            // const trueUpload = images.filter(
+            //   (item) => {
+            //     if (item.thumbUrl && item.thumbUrl.indexOf('http')) return -1;
+            //     if (item.thumbUrl && item.thumbUrl.indexOf('https')) return -1;
+            //   },
+            //   // console.log(item.thumbUrl)
+            //   //   item.thumbUrl &&
+            //   //   (item.thumbUrl.indexOf('http') || item.thumbUrl.indexOf('https')) == -1,
+            // );
+            // 取得要上傳的檔案
             const trueUpload = images.filter(
-              (item) => item.thumbUrl && item.thumbUrl.indexOf('https') == -1,
+              (item) =>
+                item.thumbUrl &&
+                ['http', 'https'].every((protocol) => item.thumbUrl.indexOf(protocol) === -1),
             );
 
+            // 取得要上傳的檔案
+            // 取得要上傳的檔案
+            // const trueUpload = images.filter(
+            //   (item) =>
+            //     item.thumbUrl &&
+            //     (item.thumbUrl.indexOf('https') === -1 || item.thumbUrl.indexOf('http') === -1),
+            // );
+
+            // trueUpload.length = 0;
+            console.log(trueUpload.length);
             //返回原始檔案(若沒有要上傳的)
             if (trueUpload.length === 0) {
               result = images.map((item) => {

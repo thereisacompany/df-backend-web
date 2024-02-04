@@ -12,7 +12,6 @@ const ArticleManagement: AppRouteModule = {
     icon: 'material-symbols:article',
     title: t('routes.menu.News'),
   },
-
   children: [
     {
       path: 'articleCategory',

@@ -264,7 +264,10 @@
           model.gameSettings = model.gameSettings ? JSON.parse(model.gameSettings) : [];
           model.articleSettings = model.articleSettings ? JSON.parse(model.articleSettings) : [];
           model.keywordSettings = model.keywordSettings ? JSON.parse(model.keywordSettings) : [];
-          model.publishDate = dayjs().format('YYYY-MM-DD');
+          // model.publishDate = dayjs().format('YYYY-MM-DD');
+          model.publishDate = model.publishDate
+            ? dayjs(model.publishDate).format('YYYY-MM-DD')
+            : dayjs().format('YYYY-MM-DD');
 
           //取得圖片
           model.images = model.images ? JSON.parse(model.images) : [];

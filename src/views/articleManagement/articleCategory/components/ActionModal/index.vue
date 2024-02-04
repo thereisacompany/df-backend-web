@@ -119,6 +119,7 @@
             console.log(data.record);
             //檔案
             fileList.value = getImages(data.record);
+            console.log(fileList.value);
           }
 
           fileUploadKey.value++;
