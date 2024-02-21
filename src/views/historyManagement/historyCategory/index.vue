@@ -214,7 +214,8 @@
         setTimeout(async () => {
           console.log('* 確認送出');
           const value = getFieldsValue();
-          const params = await integrateParams(value, currentPage.value, pageSize.value);
+          //pageSize.value
+          const params = await integrateParams(value, 1, 100);
           await fetchData(params);
         }, 500);
       }

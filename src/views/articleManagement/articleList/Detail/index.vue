@@ -325,6 +325,8 @@
             isTop: values1.isTop ? values1.isTop : 0, //置頂
             isPublish: values1.isPublish ? values1.isPublish : 0, //是否刊登
             isDelete: values1.isDelete ? values1.isDelete : 0, //是否刪除
+
+            description: values1.description ? values1.description : '', //描述
             images: '', //圖片
             // browserCount: 0, //瀏覽數(確認是否要修改)
 

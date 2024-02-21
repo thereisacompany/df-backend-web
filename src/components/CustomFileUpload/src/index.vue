@@ -126,7 +126,6 @@
         // console.log(file.size / 1024 / 1024);
         // console.log(props.maxSize);
         if (isLt20M) {
-          
           showMsg('error', `${file.name} ${t('component.upload.maxSizeOver', [props.maxSize])}`);
           return Upload.LIST_IGNORE;
         }

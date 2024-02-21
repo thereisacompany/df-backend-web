@@ -228,6 +228,8 @@
           imagetools_cors_hosts: ['spring-dev.ceos.center', 'hf8.io'],
           automatic_uploads: false,
           content_style: props.content_style,
+          convert_urls: false,
+          relative_urls: false,
           images_upload_handler: handelUplodImage,
 
           setup: (editor: Editor) => {

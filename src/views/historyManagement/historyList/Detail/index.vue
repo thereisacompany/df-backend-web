@@ -319,6 +319,7 @@
             code: values1.code ? values1.code : '', //代稱設定
             category: values1.category ? values1.category : 0, //文章類別
             // content: values1.content ? values1.content : '', //內容
+            url: values1.url ? values1.url : '', //最新消息連結
             publishDate: values1.publishDate ? dayjs(values1.publishDate).format('YYYY-MM-DD') : '', //刊登日期
             sort: values1.sort ? values1.sort : 0, //排序
             isLatest: values1.isLatest ? values1.isLatest : 0, //最新

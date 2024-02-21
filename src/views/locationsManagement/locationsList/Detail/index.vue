@@ -322,6 +322,7 @@
             longitude: values1.longitude ? values1.longitude : '', //精度
             type: values1.type ? values1.type : 0, //文章類別
             regions: values1.regions ? values1.regions : 0, //地區類別
+            business_hours: values1.business_hours ? values1.business_hours : '', //經營時間
             // content: values1.content ? values1.content : '', //內容
             // publishDate: values1.publishDate ? dayjs(values1.publishDate).format('YYYY-MM-DD') : '', //刊登日期
             // sort: values1.sort ? values1.sort : 0, //排序

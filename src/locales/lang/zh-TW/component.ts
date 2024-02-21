@@ -411,6 +411,7 @@ export default {
     relatedEventSettings: '相關賽事設定',
     hotKeywordTagSettings: '熱門關鍵字標籤設定',
     relatedArticleSettings: '相關文章設定',
+    url: '最新消息連結',
   },
   locationsManagement: {
     title: '站區',
@@ -420,6 +421,7 @@ export default {
     regions: '地區',
     latitude: '緯度',
     longitude: '經度',
+    business_hours: '營業時間',
   },
   // 網站其他設定
   otherManagement: {
