@@ -175,8 +175,8 @@
             // images: JSON.stringify({ other: images }),
             // isDelete: type.value === 0 ? null : currentInfo.value.isDelete, // 0為未刪除
             // isEnable: type.value === 0 ? null : currentInfo.value.isEnable, // 暫無切換停用啟用
-            // isPublish: checkEditFields('isPublish', value.isPublish, type.value, currentInfo.value),
-            // isTop: checkEditFields('isTop', value.isTop, type.value, currentInfo.value),
+            isPublish: checkEditFields('isPublish', value.isPublish, type.value, currentInfo.value),
+            isTop: checkEditFields('isTop', value.isTop, type.value, currentInfo.value),
             // memo: checkEditFields('memo', value.memo, type.value, currentInfo.value),
             metaData: checkEditFields('metaData', metaData, type.value, currentInfo.value),
             name: checkEditFields('name', value.name, type.value, currentInfo.value),

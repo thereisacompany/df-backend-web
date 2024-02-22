@@ -5,7 +5,9 @@ import { h } from 'vue';
 import { Switch } from 'ant-design-vue';
 import { showMsg } from '/@/utils/globalTips';
 // api
-import { updateCategory } from '/@/api/page/article/articleCategory';
+// import { updateCategory } from '/@/api/page/article/articleCategory';
+
+import { updateCategory } from '/@/api/page/other/otherSeting';
 
 const { t } = useI18n();
 
@@ -45,22 +47,22 @@ export function tableColumns(handleLoading): BasicColumn[] {
     //     });
     //   },
     // },
-    // {
-    //   title: t('component.articleManagement.post'),
-    //   dataIndex: 'isPublish',
-    //   width: 80,
-    //   customRender: ({ record }) => {
-    //     return h(Switch, {
-    //       checked: record.isPublish === 1,
-    //       checkedChildren: t('common.yes'),
-    //       unCheckedChildren: t('common.no'),
-    //       async onChange() {
-    //         // handleSwitch('isPublish', record.id, record['isPublish']);
-    //         handleStatus(record, 'isPublish', handleLoading);
-    //       },
-    //     });
-    //   },
-    // },
+    {
+      title: t('component.articleManagement.post'),
+      dataIndex: 'isPublish',
+      width: 80,
+      customRender: ({ record }) => {
+        return h(Switch, {
+          checked: record.isPublish === 1,
+          checkedChildren: t('common.yes'),
+          unCheckedChildren: t('common.no'),
+          async onChange() {
+            // handleSwitch('isPublish', record.id, record['isPublish']);
+            handleStatus(record, 'isPublish', handleLoading);
+          },
+        });
+      },
+    },
     // {
     //   title: t('common.sort'),
     //   dataIndex: 'sort',
