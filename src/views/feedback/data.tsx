@@ -30,9 +30,9 @@ export const schemas: FormSchema[] = [
 
 export const columns: BasicColumn[] = [
   { title: t('component.feedback.date'), dataIndex: 'createdAt', width: 200 },
-  { title: t('component.feedback.member'), dataIndex: 'createdBy', width: 200 },
-  { title: t('component.feedback.phone'), dataIndex: 'createdBy', width: 200 },
-  { title: t('component.feedback.question'), dataIndex: 'createdBy', width: 200 },
+  { title: t('component.feedback.member'), dataIndex: 'username', width: 200 },
+  { title: t('component.feedback.phone'), dataIndex: 'phone', width: 200 },
+  { title: t('component.feedback.question'), dataIndex: 'question', width: 200 },
   // { title: t('component.feedback.title'), dataIndex: 'title' },
   { title: t('component.feedback.content'), dataIndex: 'content' },
   { title: t('component.feedback.email'), dataIndex: 'mail' },

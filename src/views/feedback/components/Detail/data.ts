@@ -5,7 +5,7 @@ const { t } = useI18n();
 export function schemas(disabled): FormSchema[] {
   return [
     {
-      field: 'createdBy',
+      field: 'username',
       component: 'Input',
       label: t('component.feedback.member'),
       componentProps: {
@@ -24,10 +24,40 @@ export function schemas(disabled): FormSchema[] {
       },
       colProps: { span: 12 },
     },
+    // {
+    //   field: 'title',
+    //   component: 'Input',
+    //   label: t('component.feedback.title'),
+    //   componentProps: {
+    //     disabled: true,
+    //     class: 'w-full',
+    //   },
+    //   colProps: { span: 24 },
+    // },
     {
-      field: 'title',
+      field: 'question',
       component: 'Input',
-      label: t('component.feedback.title'),
+      label: t('component.feedback.question'),
+      componentProps: {
+        disabled: true,
+        class: 'w-full',
+      },
+      colProps: { span: 24 },
+    },
+    {
+      field: 'phone',
+      component: 'Input',
+      label: t('component.feedback.phone'),
+      componentProps: {
+        disabled: true,
+        class: 'w-full',
+      },
+      colProps: { span: 24 },
+    },
+    {
+      field: 'address',
+      component: 'Input',
+      label: t('component.feedback.address'),
       componentProps: {
         disabled: true,
         class: 'w-full',
