@@ -9,7 +9,7 @@ const backendFeedback: AppRouteModule = {
   component: LAYOUT,
   redirect: '/backend/feedback',
   meta: {
-    orderNo: 4,
+    orderNo: 5,
     hideChildrenInMenu: true,
     icon: 'fluent-mdl2:questionnaire',
     title: t('routes.menu.Feedback'),

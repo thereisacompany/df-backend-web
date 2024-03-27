@@ -27,19 +27,19 @@ export const schemas_step1: FormSchema[] = [
     },
     colProps: { xs: 24, sm: 24, md: 24, lg: 24 },
   },
-  // {
-  //   field: 'code',
-  //   label: t('component.articleManagement.pronounSettings'),
-  //   component: 'Input',
-  //   required: true,
-  //   componentProps: {
-  //     placeholder: t('common.inputText'),
-  //     allowClear: true,
-  //     maxlength: 100,
-  //     showCount: true,
-  //   },
-  //   colProps: { xs: 24, sm: 24, md: 12, lg: 12 },
-  // },
+  {
+    field: 'code',
+    label: t('component.articleManagement.pronounSettings'),
+    component: 'Input',
+    required: true,
+    componentProps: {
+      placeholder: t('common.inputText'),
+      allowClear: true,
+      maxlength: 100,
+      showCount: true,
+    },
+    colProps: { xs: 24, sm: 24, md: 12, lg: 12 },
+  },
   {
     field: 'category',
     label: t('component.articleManagement.articleCategory'),
@@ -62,7 +62,7 @@ export const schemas_step1: FormSchema[] = [
     componentProps: {
       placeholder: t('common.chooseText'),
       valueFormat: 'YYYY-MM-DD',
-      disabled: true,
+      disabled: false,
     },
     colProps: { xs: 24, sm: 6, md: 6, lg: 4 },
   },
@@ -162,6 +162,17 @@ export const schemas_step1: FormSchema[] = [
     colProps: { span: 24 },
   },
   {
+    field: 'description',
+    label: t('component.articleManagement.description'),
+    component: 'Input',
+    componentProps: {
+      height: 290,
+      rows: 4,
+      maxlength: 255,
+    },
+    colProps: { span: 24 },
+  },
+  {
     field: 'content',
     component: 'Input',
     label: t('component.articleManagement.contentDescription'),
@@ -184,6 +195,7 @@ export const schemas_step1: FormSchema[] = [
           font-style: italic;
           border-left: 5px solid #ccc;
         }`,
+        
         value: model[field],
         onChange: (value: string) => {
           model[field] = value;
@@ -251,12 +263,12 @@ export const schemas_step3: FormSchema[] = [
     component: 'Input',
     colProps: { span: 24 },
   },
-  {
-    field: 'description',
-    label: 'META:DESCRIPTION/OG:DESCRIPTION',
-    component: 'Input',
-    colProps: { span: 24 },
-  },
+  // {
+  //   field: 'description',
+  //   label: 'META:DESCRIPTION/OG:DESCRIPTION',
+  //   component: 'Input',
+  //   colProps: { span: 24 },
+  // },
   {
     field: 'html',
     label: 'HEADER JS/HTML CODE',
@@ -285,7 +297,9 @@ function getChangeValue(value: any) {
   if (typeof value == 'string') {
     // 過濾字串中的base64
     const doc = new DOMParser().parseFromString(value, 'text/html');
+    console.log(doc);
     const imgs = doc.getElementsByTagName('img');
+    console.log(imgs);
 
     for (let i = 0; i < imgs.length; i++) {
       if (imgs[i].src.startsWith('data:image')) {

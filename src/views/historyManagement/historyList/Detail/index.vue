@@ -265,13 +265,16 @@
           model.gameSettings = model.gameSettings ? JSON.parse(model.gameSettings) : [];
           model.articleSettings = model.articleSettings ? JSON.parse(model.articleSettings) : [];
           model.keywordSettings = model.keywordSettings ? JSON.parse(model.keywordSettings) : [];
-          model.publishDate = dayjs().format('YYYY-MM-DD');
+          // model.publishDate = dayjs().format('YYYY-MM-DD');
+          model.publishDate = model.publishDate
+            ? dayjs(model.publishDate).format('YYYY-MM-DD')
+            : dayjs().format('YYYY-MM-DD');
 
           //取得圖片
-          model.images = model.images ? JSON.parse(model.images) : [];
-          model.listImg = model.images.list ? model.images.list : [];
-          model.detailImg = model.images.inner ? model.images.inner : [];
-          model.thumbnailImg = model.images.icon ? model.images.icon : [];
+          // model.images = model.images ? JSON.parse(model.images) : [];
+          // model.listImg = model.images.list ? model.images.list : [];
+          // model.detailImg = model.images.inner ? model.images.inner : [];
+          // model.thumbnailImg = model.images.icon ? model.images.icon : [];
 
           await unref(step.step1.ref).setFieldsValue(model);
           await unref(step.step2.ref).setFieldsValue(model);
@@ -292,18 +295,18 @@
           spinning.value = true;
 
           //編輯器上傳圖片
-          const resTinymce = await tinymceRef.value?.startUploadFile();
-          const sizeTooBig = XEUtils.filter(resTinymce, (item) => item.status === false);
-          if (sizeTooBig.length > 0) {
-            showMsg(
-              'error',
-              t('component.articleManagement.contentDescription') +
-                '，' +
-                t('component.upload.uploadError'),
-            );
-            spinning.value = false;
-            return false;
-          }
+          // const resTinymce = await tinymceRef.value?.startUploadFile();
+          // const sizeTooBig = XEUtils.filter(resTinymce, (item) => item.status === false);
+          // if (sizeTooBig.length > 0) {
+          //   showMsg(
+          //     'error',
+          //     t('component.articleManagement.contentDescription') +
+          //       '，' +
+          //       t('component.upload.uploadError'),
+          //   );
+          //   spinning.value = false;
+          //   return false;
+          // }
 
           //取得values
           const values1 = step.step1.ref.getFieldsValue();
@@ -315,7 +318,8 @@
             title: values1.title ? values1.title : '', //標題
             code: values1.code ? values1.code : '', //代稱設定
             category: values1.category ? values1.category : 0, //文章類別
-            content: values1.content ? values1.content : '', //內容
+            // content: values1.content ? values1.content : '', //內容
+            url: values1.url ? values1.url : '', //最新消息連結
             publishDate: values1.publishDate ? dayjs(values1.publishDate).format('YYYY-MM-DD') : '', //刊登日期
             sort: values1.sort ? values1.sort : 0, //排序
             isLatest: values1.isLatest ? values1.isLatest : 0, //最新
@@ -337,8 +341,8 @@
           };
 
           //images
-          const images = await upload(values1);
-          model.images = JSON.stringify(images);
+          // const images = await upload(values1);
+          // model.images = JSON.stringify(images);
 
           //api
           let res = { code: 400 };

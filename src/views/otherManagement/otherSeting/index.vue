@@ -178,6 +178,7 @@
         try {
           const response = await getCategoryList(params);
           total.value = response.result.total;
+          console.log(total.value);
           tableData.dataSources = response.result.rows;
           // tableData.dataSources = fakeList();
         } catch (error) {
@@ -210,7 +211,9 @@
         setTimeout(async () => {
           console.log('* 確認送出');
           const value = getFieldsValue();
-          const params = await integrateParams(value, currentPage.value, pageSize.value);
+          // console.log(pageSize.value);
+          // console.log(currentPage.value);
+          const params = await integrateParams(value, 1, 100);
           await fetchData(params);
         }, 500);
       }

@@ -159,10 +159,14 @@ export class VAxios {
   uploadFile<T = any>(config: AxiosRequestConfig, params: UploadFileParams) {
     const formData = new window.FormData();
     const customFilename = params.name || 'file';
-    console.log('近來嗎？');
+    // if (!params.file) {
+    //   return;
+    // }
+    console.log(params.filename);
     if (params.filename) {
-      // 只有在 params.filename 存在的情況下才將 params.file 放入 FormData
       formData.append(customFilename, params.file, params.filename);
+    } else {
+      formData.append(customFilename, params.file);
     }
 
     if (params.data) {

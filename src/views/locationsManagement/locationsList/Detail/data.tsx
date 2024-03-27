@@ -67,6 +67,19 @@ export const schemas_step1: FormSchema[] = [
     colProps: { xs: 24, sm: 24, md: 12, lg: 12 },
   },
   {
+    field: 'business_hours',
+    label: t('component.locationsManagement.business_hours'),
+    component: 'Input',
+    required: false,
+    componentProps: {
+      placeholder: t('common.inputText'),
+      allowClear: true,
+      maxlength: 100,
+      showCount: true,
+    },
+    colProps: { xs: 24, sm: 24, md: 12, lg: 12 },
+  },
+  {
     field: 'phone',
     label: t('component.locationsManagement.phpone'),
     component: 'Input',

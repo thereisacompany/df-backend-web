@@ -252,6 +252,8 @@ const handleStatus = async (record, field, handleLoading) => {
 
 //取得圖片清單
 export const getImages = (record) => {
+  console.log(record.images);
+
   try {
     if (!record.images) return [];
 

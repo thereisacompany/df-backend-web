@@ -8,7 +8,7 @@ const OtherManagement: AppRouteModule = {
   component: LAYOUT,
   redirect: '/backend/otherManagement',
   meta: {
-    orderNo: 5,
+    orderNo: 6,
     icon: 'material-symbols:article',
     title: t('routes.menu.OtherManagement.OtherManagement'),
   },

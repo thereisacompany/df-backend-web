@@ -41,6 +41,19 @@ export const schemas_step1: FormSchema[] = [
     colProps: { xs: 24, sm: 24, md: 12, lg: 12 },
   },
   {
+    field: 'url',
+    label: t('component.articleManagement.url'),
+    component: 'Input',
+    required: false,
+    componentProps: {
+      placeholder: t('common.inputText'),
+      allowClear: true,
+      maxlength: 100,
+      showCount: true,
+    },
+    colProps: { xs: 24, sm: 24, md: 12, lg: 12 },
+  },
+  {
     field: 'category',
     label: t('component.articleManagement.articleCategory'),
     component: 'Select',
@@ -62,7 +75,7 @@ export const schemas_step1: FormSchema[] = [
     componentProps: {
       placeholder: t('common.chooseText'),
       valueFormat: 'YYYY-MM-DD',
-      disabled: true,
+      disabled: false,
     },
     colProps: { xs: 24, sm: 6, md: 6, lg: 4 },
   },
@@ -130,30 +143,30 @@ export const schemas_step1: FormSchema[] = [
     slot: 'customSlot',
     colProps: { span: 24 },
   },
-  {
-    field: 'listImg',
-    label: t('component.articleManagement.uploadListImages'),
-    component: 'Input',
-    required: true,
-    slot: 'customSlot',
-    colProps: { xs: 24, sm: 12, md: 8, lg: 8 },
-  },
-  {
-    field: 'detailImg',
-    label: t('component.articleManagement.uploadInnerPageImages'),
-    component: 'Input',
-    required: true,
-    slot: 'customSlot',
-    colProps: { xs: 24, sm: 12, md: 8, lg: 8 },
-  },
-  {
-    field: 'thumbnailImg',
-    label: t('component.articleManagement.pageThumbnailSettings'),
-    component: 'Input',
-    required: true,
-    slot: 'customSlot',
-    colProps: { xs: 24, sm: 12, md: 8, lg: 8 },
-  },
+  // {
+  //   field: 'listImg',
+  //   label: t('component.articleManagement.uploadListImages'),
+  //   component: 'Input',
+  //   required: true,
+  //   slot: 'customSlot',
+  //   colProps: { xs: 24, sm: 12, md: 8, lg: 8 },
+  // },
+  // {
+  //   field: 'detailImg',
+  //   label: t('component.articleManagement.uploadInnerPageImages'),
+  //   component: 'Input',
+  //   required: true,
+  //   slot: 'customSlot',
+  //   colProps: { xs: 24, sm: 12, md: 8, lg: 8 },
+  // },
+  // {
+  //   field: 'thumbnailImg',
+  //   label: t('component.articleManagement.pageThumbnailSettings'),
+  //   component: 'Input',
+  //   required: true,
+  //   slot: 'customSlot',
+  //   colProps: { xs: 24, sm: 12, md: 8, lg: 8 },
+  // },
   {
     field: 'divider',
     label: '',
@@ -161,40 +174,40 @@ export const schemas_step1: FormSchema[] = [
     slot: 'customSlot',
     colProps: { span: 24 },
   },
-  {
-    field: 'content',
-    component: 'Input',
-    label: t('component.articleManagement.contentDescription'),
-    required: true,
-    render: ({ model, field }) => {
-      return h(Tinymce, {
-        menubar: false,
-        options: {},
-        plugins: ['link lists image table media code'],
-        toolbar: [
-          'formatselect | bold italic link bullist numlist | outdent indent | image blockquote table media code undo redo',
-        ],
-        customSkin: 'oxide-dark',
-        content_style: `blockquote {
-          overflow: hidden;
-          padding-right: 1.5em;
-          padding-left: 1.5em;
-          margin-left: 0;
-          margin-right: 0;
-          font-style: italic;
-          border-left: 5px solid #ccc;
-        }`,
-        value: model[field],
-        onChange: (value: string) => {
-          model[field] = value;
-          getChangeValue(value);
-        },
-        height: 290,
-        ref: tinymceRef,
-      });
-    },
-    colProps: { span: 24 },
-  },
+  // {
+  //   field: 'content',
+  //   component: 'Input',
+  //   label: t('component.articleManagement.contentDescription'),
+  //   required: true,
+  //   render: ({ model, field }) => {
+  //     return h(Tinymce, {
+  //       menubar: false,
+  //       options: {},
+  //       plugins: ['link lists image table media code'],
+  //       toolbar: [
+  //         'formatselect | bold italic link bullist numlist | outdent indent | image blockquote table media code undo redo',
+  //       ],
+  //       customSkin: 'oxide-dark',
+  //       content_style: `blockquote {
+  //         overflow: hidden;
+  //         padding-right: 1.5em;
+  //         padding-left: 1.5em;
+  //         margin-left: 0;
+  //         margin-right: 0;
+  //         font-style: italic;
+  //         border-left: 5px solid #ccc;
+  //       }`,
+  //       value: model[field],
+  //       onChange: (value: string) => {
+  //         model[field] = value;
+  //         getChangeValue(value);
+  //       },
+  //       height: 290,
+  //       ref: tinymceRef,
+  //     });
+  //   },
+  //   colProps: { span: 24 },
+  // },
 ];
 export const schemas_step2: FormSchema[] = [
   // {

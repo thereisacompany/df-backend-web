@@ -88,16 +88,16 @@ export const filterSchemas: FormSchema[] = [
 export const getColumns = (categorys, handleLoading) => {
   const columns: BasicColumn[] = [
     { title: 'ID	', dataIndex: 'id', width: 50 },
-    {
-      title: t('component.upload.image'),
-      dataIndex: 'image',
-      width: 80,
-      customRender: ({ record }) => {
-        const data = record.images ? JSON.parse(record.images) : { list: [], inner: [], icon: [] };
-        const img = data.icon.length > 0 ? data.icon[0].thumbUrl : '';
-        return h('img', { src: img, class: 'h-12 m-auto' });
-      },
-    },
+    // {
+    //   title: t('component.upload.image'),
+    //   dataIndex: 'image',
+    //   width: 80,
+    //   customRender: ({ record }) => {
+    //     const data = record.images ? JSON.parse(record.images) : { list: [], inner: [], icon: [] };
+    //     const img = data.icon.length > 0 ? data.icon[0].thumbUrl : '';
+    //     return h('img', { src: img, class: 'h-12 m-auto' });
+    //   },
+    // },
     {
       title: t('component.articleManagement.titleContent'),
       dataIndex: 'body',
