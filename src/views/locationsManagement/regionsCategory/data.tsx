@@ -5,7 +5,7 @@ import { h } from 'vue';
 import { Switch } from 'ant-design-vue';
 import { showMsg } from '/@/utils/globalTips';
 // api
-import { updateCategory } from '/@/api/page/history/historyCategory';
+import { updateCategory } from '/@/api/page/locations/locationRegions';
 
 const { t } = useI18n();
 
@@ -65,11 +65,11 @@ export function tableColumns(handleLoading): BasicColumn[] {
     //     });
     //   },
     // },
-    // {
-    //   title: t('common.sort'),
-    //   dataIndex: 'sort',
-    //   width: 60,
-    // },
+    {
+      title: t('common.sort'),
+      dataIndex: 'sort',
+      width: 60,
+    },
     {
       title: t('common.createTime'),
       dataIndex: 'createdAt',

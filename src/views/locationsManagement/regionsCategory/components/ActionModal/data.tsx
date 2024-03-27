@@ -28,15 +28,15 @@ export const schemas_step1: FormSchema[] = [
     colProps: { xs: 24, sm: 24, md: 24, lg: 24 },
   },
 
-  // {
-  //   field: 'sort',
-  //   label: t('common.sort'),
-  //   component: 'InputNumber',
-  //   componentProps: {
-  //     min: 1,
-  //   },
-  //   colProps: { xs: 24, sm: 6, md: 6, lg: 4 },
-  // },
+  {
+    field: 'sort',
+    label: t('common.sort'),
+    component: 'InputNumber',
+    componentProps: {
+      min: 1,
+    },
+    colProps: { xs: 24, sm: 6, md: 6, lg: 4 },
+  },
 
   // {
   //   field: 'isFeatured',
