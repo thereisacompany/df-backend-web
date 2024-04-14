@@ -70,16 +70,36 @@ export function tableColumns(handleLoading): BasicColumn[] {
       dataIndex: 'sort',
       width: 60,
     },
-    {
-      title: t('common.createTime'),
-      dataIndex: 'createdAt',
-      width: 120,
-    },
+    // {
+    //   title: t('common.createTime'),
+    //   dataIndex: 'createdAt',
+    //   width: 120,
+    // },
     // {
     //   title: t('component.articleManagement.articleCounts'),
     //   dataIndex: 'count',
     //   width: 60,
     // },
+    {
+      title: t('component.backend.createdAt'),
+      dataIndex: 'createdAt',
+      width: 150,
+    },
+    {
+      title: t('component.backend.createdBy'),
+      dataIndex: 'createdBy',
+      width: 60,
+    },
+    {
+      title: t('component.backend.updatedAt'),
+      dataIndex: 'updatedAt',
+      width: 150,
+    },
+    {
+      title: t('component.backend.updatedBy'),
+      dataIndex: 'updatedBy',
+      width: 60,
+    },
     {
       title: t('common.action'),
       key: 'action',
@@ -151,6 +171,7 @@ export function schemas(disabled): FormSchema[] {
       },
       colProps: { span: 6 },
     },
+
     {
       field: 'memo',
       label: t('component.articleManagement.description'),
