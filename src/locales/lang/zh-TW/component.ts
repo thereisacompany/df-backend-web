@@ -320,6 +320,10 @@ export default {
     enterJob: '請輸入帳號',
     enterAlphanumeric: '請輸入英數字',
     sameJob: '系統存在相同帳號，請重新輸入',
+    createdAt: '建立時間',
+    createdBy: '建立者',
+    updatedAt: '修改時間',
+    updatedBy: '修改者',
   },
   whitelist: {
     officeName: '辦公室名稱',

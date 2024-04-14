@@ -215,6 +215,26 @@ export const getColumns = (categorys, handleLoading) => {
       dataIndex: 'publishDate',
       width: 110,
     },
+    {
+      title: t('component.backend.createdAt'),
+      dataIndex: 'createdAt',
+      width: 150,
+    },
+    {
+      title: t('component.backend.createdBy'),
+      dataIndex: 'createdBy',
+      width: 60,
+    },
+    {
+      title: t('component.backend.updatedAt'),
+      dataIndex: 'updatedAt',
+      width: 150,
+    },
+    {
+      title: t('component.backend.updatedBy'),
+      dataIndex: 'updatedBy',
+      width: 60,
+    },
     // {
     //   title: t('component.articleManagement.views'),
     //   dataIndex: 'view',
